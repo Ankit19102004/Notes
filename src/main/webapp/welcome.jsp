@@ -5,9 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome page</title>
+<%@ include file="all_components/allcss.jsp"%>
+
 </head>
 <body>
-<h1>hello duniya</h1>
+	<%@ include file="all_components/navbar.jsp"%>
+
+<h1 class="text-center">hello duniya</h1>
+	<%@ include file="all_components/footer.jsp"%>
+
 
 </body>
 </html>
