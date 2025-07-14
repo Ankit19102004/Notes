@@ -4,8 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome page
-</title>
+<title>Welcome page</title>
 </head>
 <body>
 
