@@ -8,8 +8,8 @@
 <%@ include file="all_components/allcss.jsp"%>
 <style>
 .back-img {
-	background: url(image/kingkohli.jpg);
-	width: 500px;
+	background: url(image/goku.jpg);
+	width: 100%;
 	height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;

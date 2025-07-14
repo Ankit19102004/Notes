@@ -7,6 +7,7 @@
 <title>Welcome page</title>
 </head>
 <body>
+<h1>hello duniya</h1>
 
 </body>
 </html>

@@ -16,19 +16,31 @@
 					<div class="card-header">
 						<h1>Login</h1>
 					</div>
+					<%
+					String invalidMsg = (String) session.getAttribute("login-failed");
+					if (invalidMsg != null) {
+					%>
+					<div class="alert alert-danger" role="alert">
+						<%=invalidMsg%>
+					</div>
+					<%
+					session.removeAttribute("login-failed");
+					}
+					%>
 					<div class="card-body">
 						<form method="post" action="LoginServlet">
 
-							
+
 							<div class="form-group">
 								<label for="exampleInputEmail1">Email address</label> <input
-									type="email" name="uemail"class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter email">
+									type="email" name="uemail" class="form-control"
+									id="exampleInputEmail1" aria-describedby="emailHelp"
+									placeholder="Enter email">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputPassword1">Password</label> <input
-									type="password" name="upassword" class="form-control" id="exampleInputPassword1"
-									placeholder="Password">
+									type="password" name="upassword" class="form-control"
+									id="exampleInputPassword1" placeholder="Password">
 							</div>
 
 							<button type="submit" class="btn btn-primary">Login</button>
