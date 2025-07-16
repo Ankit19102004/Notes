@@ -9,7 +9,7 @@
 			<li class="nav-item active"><a class="nav-link" href="index.jsp">Home
 			</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-			<li class="nav-item"><a class="nav-link" href="#">Show notes</a>
+			<li class="nav-item"><a class="nav-link" href="showNotes.jsp">Show notes</a>
 			</li>
 			<li class="nav-item"><a class="nav-link" href="addNotes.jsp">Add
 					notes</a></li>
@@ -28,7 +28,7 @@
 				
 				<a
 				class="btn btn-outline-primary my-2 my-sm-0" type="submit"
-				href="register.jsp">Logout</a>
+				href="LogoutServlet">Logout</a>
 		</form>
 		<%
 		} else {

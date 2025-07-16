@@ -27,6 +27,17 @@
 					session.removeAttribute("login-failed");
 					}
 					%>
+					<%
+					String AuthMsg = (String) session.getAttribute("login-error");
+					if (AuthMsg  != null) {
+					%>
+					<div class="alert alert-danger" role="alert">
+						<%=AuthMsg%>
+					</div>
+					<%
+					session.removeAttribute("login-error");
+					}
+					%>
 					<div class="card-body">
 						<form method="post" action="LoginServlet">
 
