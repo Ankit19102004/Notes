@@ -1,10 +1,10 @@
-<%
-	UserDetails user1=(UserDetails)session.getAttribute("userD");
- 	if(user1==null){
- 		response.sendRedirect("login.jsp");
- 		session.setAttribute("login-error","please login first");
- 	}
 
+<%
+UserDetails user1 = (UserDetails) session.getAttribute("userD");
+if (user1 == null) {
+	response.sendRedirect("login.jsp");
+	session.setAttribute("login-error", "please login first");
+}
 %>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -23,17 +23,32 @@
 		<h1 class="text-center">Add your Note</h1>
 		<div class="row">
 			<div class="col-md-12">
-				<form>
+				<form action="AddNotes" method="post">
 
+					<div class="form-group">
+						<%
+						UserDetails us = (UserDetails)session.getAttribute("userD");
+						if (us!= null) {
+						%>
+
+						<input type="hidden" name="uid" class="from-control"
+							value="<%=us.getId()%>">
+
+
+						<%
+						}
+						%>
+					</div>
 
 					<div class="form-group">
 						<label for="exampleInputEmail1">Enter title</label> <input
-							type="email" class="form-control" id="exampleInputEmail1"
-							aria-describedby="emailHelp" placeholder="Enter title">
+							type="text" name="title" class="form-control"
+							id="exampleInputEmail1" aria-describedby="emailHelp"
+							placeholder="Enter title">
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1">content</label>
-						<textarea rows="12" class="form-control" id=""></textarea>
+						<textarea rows="12" class="form-control" name="content" id=""></textarea>
 					</div>
 
 					<button type="submit" class="btn btn-primary">Add Note</button>
