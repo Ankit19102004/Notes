@@ -32,7 +32,7 @@ if (user1 == null) {
 		%>
 		<div class="col-md-4 mb-5">
 			<div class="card mt-3 w-100 h-100">
-				<div class="card-body p-4">
+				<div class="card-body p-4" >
 					<h4 class="card-title">
 						Title:<%=po.getTitle()%></h4>
 					<p>
